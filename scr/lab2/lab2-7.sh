@@ -7,10 +7,8 @@ then
   for i in $(seq 5)
   do
     eval mkdir $name$i
-    eval touch "$name$i.txt"
-    cd $name$i
-    ln -s $name$i.txt $name$i
-    cd ..
+    eval touch $name$i.txt
+    ln -s $name$i.txt ./$name$i
   done
 fi
 exit 0
